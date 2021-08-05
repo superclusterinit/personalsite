@@ -1,14 +1,26 @@
 <script>
 import AboutMe from "./AboutMe.svelte";
 import HowItStarted from "./HowItStarted.svelte";
+import Kimchi from "./Kimchi.svelte";
+import AudioPlayer, { stopAll } from './AudioPlayer.svelte'
+
+let audioTracks = [
+  'Helena/mp3',
+  'https://sveltejs.github.io/assets/music/holst.mp3',
+  'https://sveltejs.github.io/assets/music/satie.mp3'
+]
 
 
 </script>
 
 <main>
 	<h1>Welcome to My Space!</h1>
+  {#each audioTracks as src}
+  <AudioPlayer {src} />
+  {/each}
 	<AboutMe />
   <HowItStarted />
+  <Kimchi />
 </main>
 
 <style>
