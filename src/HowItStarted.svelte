@@ -32,7 +32,6 @@
   article {
     height: 250px;
     width: 250px;
-    object-position: center;
   }
 
   div {
